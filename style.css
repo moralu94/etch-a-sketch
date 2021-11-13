@@ -1,9 +1,10 @@
 *{
     font-family: 'Indie Flower', cursive;
+    margin: 0;
 }
 
-body{
-    margin: 0;
+body, html{
+    height: 100%;
     background-color: rgb(184,220,255);
 }
 
@@ -11,6 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: calc(100% - 5rem);
 }
 
 .container{
@@ -23,13 +25,14 @@ body{
     min-height: 680px;
     border: 3px solid rgb(121, 178, 255);
     flex-direction: column;
+    gap: 20px;
 }
 
 .title{
     display: flex;
     font-size: 2em;
     color: rgb(121, 178, 255);
-    margin-bottom: 20px;
+    font-weight: 900;
 }
 
 .grid__container{
@@ -37,4 +40,16 @@ body{
     min-width: 500px;
     min-height: 500px;
     display: grid;
+    margin-bottom: 30px;
+}
+
+.footer{
+    display: flex;
+    background-color: rgb(255, 166, 0);
+    padding: 1em;
+    color: rgb(121, 178, 255);
+    font-size: 20px;
+    font-weight: 800;
+    justify-content: center;
+    margin-top: 10px;
 }

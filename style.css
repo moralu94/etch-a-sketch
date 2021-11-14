@@ -109,12 +109,14 @@ button:hover{
 #size::-webkit-slider-runnable-track {
     width: 100%;
     height: 5px;
+    border-radius: 15px;
     cursor: pointer;
 }
 
 #size::-moz-range-track {
     width: 100%;
     height: 5px;
+    border-radius: 15px;
     cursor: pointer;
 }
 

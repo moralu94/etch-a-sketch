@@ -61,6 +61,7 @@ button{
     border: 3px solid rgb(66, 148, 255);
     border-radius: 5px;
     font-size: 15px;
+    cursor: pointer;
 }
 
 button:hover{
@@ -70,6 +71,8 @@ button:hover{
 .menu{
     display: flex;
     gap: 20px;
+    height: 35px;
+    align-items: center;
 }
 
 #size{
@@ -78,6 +81,21 @@ button:hover{
     cursor: pointer;
     -webkit-appearance:none;
     background: rgb(173, 124, 33);
+}
+
+#inputColor{
+    border: 3px solid rgb(66, 148, 255);
+    background-color:rgb(173, 124, 33);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#inputColor:hover{
+    background-color: rgb(255, 166, 0);
+}
+
+#slideRange{
+    margin-bottom: 15px;
 }
 
 #size::-webkit-slider-thumb {

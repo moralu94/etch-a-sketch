@@ -1,7 +1,9 @@
 const screen = document.querySelector ('.grid__container');
-const btnClear = document.getElementById('clear');
-const rangeInput = document.getElementById('slideRange');
-const sizeDisplay =document.getElementById('display');
+const btnClear = document.getElementById ('clear');
+const rangeInput = document.getElementById ('size');
+const sizeDisplay = document.getElementById ('display');
+const btnErase = document.getElementById ('erase');
+const btnColor = document.getElementById ('inputColor');
 
 let screenSize = 16;
 let pixel = '';
@@ -28,15 +30,24 @@ drawing(screenSize);
 btnClear.addEventListener("click", () =>{
     screen.innerHTML = '';
     drawing(screenSize);
-})
-
-rangeInput.addEventListener('change', (e) =>{
-    screenSize = e.target.value;
-    screen.innerHTML = '';
-    drawing(screenSize);
-    sizeDisplay.textContent = ('size = ' + screenSize);
 });
 
-rangeInput.addEventListener('mousemove', (e) => {
-    sizeDisplay.textContent = ('size = ' + screenSize);
-})
+btnErase.addEventListener("click", () => {
+    color = '#ffffff';
+});
+
+btnColor.addEventListener('input', (e) =>{
+    color = e.target.value; 
+});
+
+rangeInput.addEventListener('change', (e) =>{
+    screenSize = e.target.valueAsNumber;
+    screen.innerHTML = '';
+    drawing(screenSize);
+    sizeDisplay.textContent = ('size = ' + e.target.value);
+});
+
+rangeInput.addEventListener("mousemove", (e) => {
+    sizeDisplay.textContent = ('size = ' + e.target.value);
+});
+

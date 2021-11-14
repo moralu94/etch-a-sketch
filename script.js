@@ -1,4 +1,5 @@
 const screen = document.querySelector ('.grid__container');
+const btnClear = document.getElementById('clear');
 
 let screenSize = 16;
 let pixel = '';
@@ -21,3 +22,8 @@ function paint (e) {
 
 screen.addEventListener('mouseover', paint);
 drawing(screenSize);
+
+btnClear.addEventListener("click", () =>{
+    screen.innerHTML = '';
+    drawing(screenSize);
+})
